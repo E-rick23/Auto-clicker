@@ -27,7 +27,8 @@ suggest_install_command() {
 }
 
 click() {
-    sleep 0.1
+    # Uncomment this to get slower clicks!
+    # sleep 0.1
     xdotool click 1  # Using xdotool, this command emulates the mouse click
 }
 
