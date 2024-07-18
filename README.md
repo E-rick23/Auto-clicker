@@ -2,7 +2,7 @@
 Script that emulates mouse clicks for Bash.
 
 ## Dependencies
-This script needs xdotool to work! The script also verifies if it's installed in your system before running, and suggests the correct way to install it, if it doesn't find it.
+This script needs **_xdotool_** to work! The script also verifies if it's installed in your system before running, and suggests the correct way to install it, if it doesn't find it.
 
 ## Usage
 First things first, allowing the script execution with:
