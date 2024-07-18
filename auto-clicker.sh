@@ -38,13 +38,13 @@ if ! command -v xdotool &> /dev/null; then
 fi
 
 #Starting the auto-clicker
-echo "Press 'x' and 'Enter' to stop the loop!"
+echo "Press 'x' to stop the loop!"
 
 while true; do
     click
     read -n 1 -t 0.01 key  # Reads a char with a 0.01 second timeout.
     if [[ $key == "x" ]]; then
-        echo "Parando o loop."
+        echo -e "\nPoof! Auto-clicker has been stopped!"
         break
     fi
 done
