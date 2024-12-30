@@ -5,7 +5,7 @@ suggest_install_command() {
     if [ -f /etc/os-release ]; then
         . /etc/os-release
         case $ID in
-            ubuntu|debian)
+            ubuntu|debian|zorin)
                 echo -e "Error: xdotool isn't installed! \nInstall it with the command: sudo apt-get install xdotool"
                 ;;
             fedora)
