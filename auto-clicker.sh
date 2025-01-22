@@ -81,7 +81,7 @@ echo "Press 'x' to stop the loop!"
 while true; do
     click
     read -n 1 -t 0.01 key  # Reads a char with a 0.01 second timeout.
-    if [[ $key == "x" ]]; then
+    if [[ $key == "x" || $key == "X" ]]; then
         echo -e "\nPoof! Auto-clicker has been stopped!"
         break
     fi
