@@ -5,7 +5,7 @@ suggest_install_command() {
     if [ -f /etc/os-release ]; then
         . /etc/os-release
         case $ID in
-            ubuntu|debian|zorin)
+            ubuntu|debian|zorin|linuxmint)
                 INSTALL_CMD="sudo apt-get install xdotool"
                 ;;
             fedora)
