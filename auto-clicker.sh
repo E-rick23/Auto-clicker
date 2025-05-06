@@ -38,19 +38,21 @@ ask_to_install_xdotool() {
         if [[ $response =~ ^[Yy]$ ]]; then
             echo "Installing xdotool..."
             eval "$INSTALL_CMD"
-            if [ $? -eq 0 ]; then
-                echo "xdotool has been successfully installed!"
-                return 0
-            else
-                echo "Failed to install xdotool. Please try installing it manually."
-                return 1
-            fi
         else
             echo "Installation skipped. xdotool is required to run this script."
-            return 1
         fi
     fi
+
+    # Verifica se o xdotool foi instalado com sucesso
+    if command -v xdotool &> /dev/null; then
+        echo "xdotool has been successfully installed!"
+        return 0
+    else
+        echo "xdotool is not installed. The script cannot continue."
+        return 1
+    fi
 }
+
 
 # Function to ask the user if they want to start the script.
 ask_to_start_script() {
