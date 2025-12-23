@@ -6,7 +6,7 @@ int main() {
 
     bool clicking = false;
 
-    // Estrutura para o evento de clique (otimizada para reuso)
+    // Estrutura para o evento de clique
     INPUT inputs[2] = {};
     
     // Configura o botão pressionado (Down)
@@ -23,7 +23,7 @@ int main() {
             break;
         }
 
-        // Toggle com F6 (Lógica simples para evitar flip-flop rápido demais)
+        // Ativa e desativa o auto-click com F6
         if (GetAsyncKeyState(VK_F6) & 1) {
             clicking = !clicking;
             std::cout << (clicking ? "Ativado" : "Pausado") << std::endl;
@@ -31,14 +31,13 @@ int main() {
 
         if (clicking) {
             // SendInput é a função mais rápida da WinAPI para injeção de input
-            // Envia o Down e o Up em um único batch para eficiência
             SendInput(2, inputs, sizeof(INPUT));
             
-            // IMPORTANTE: Sem um pequeno delay, você pode travar o PC ou a aplicação alvo
-            // Sleep(1) = 1 milissegundo. Para velocidade INSANA, remova ou use Sleep(0).
-            // Sleep(1); 
+            // IMPORTANTE: Sem um pequeno delay, você pode travar o PC ou a aplicação alvo, é recomendado deixar a função sleep ativa por 1 millisegundo
+            Sleep(1); 
         }
     }
 
     return 0;
+
 }
