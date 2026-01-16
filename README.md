@@ -1,17 +1,21 @@
 # Auto-clicker
-Script that emulates mouse clicks for Bash.
+Scripts that emulates mouse clicks for Windows and Linux.
 
 ## Dependencies
-This script needs **_xdotool_** to work! But don't worry, the script checks, and if it doesn't find xdotool, it asks if you want to install it on your system, how covenient!
+The Bash script needs **_xdotool_** to work! But don't worry, the script checks, and if it doesn't find xdotool, it asks if you want to install it on your system, how covenient!
+The Windows script has no dependencies, as it uses system calls to work.
 
 ## Usage
-First things first, allowing the script execution with:
+- Windows
+  You only need to compile the code and run the generated .exe file in your favorite terminal.
+- Linux
+  First things first, allowing the script execution with:
 
-``` $ sudo chmod +x auto-clicker.sh ```
+  ``` $ sudo chmod +x auto-clicker.sh ```
 
-After this, simply type:
+  After this, simply type:
 
-``` $ ./auto-clicker.sh ```
+  ``` $ ./auto-clicker.sh ```
 
 Enjoy your extra clicks! :D
 
