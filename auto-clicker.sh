@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Identifica o código da tecla F6 no seu terminal
+F6_KEY=$(tput kf6)
+
 # Function that detects the Linux distro being used and sends the appropriate message to the user.
 suggest_install_command() {
     if [ -f /etc/os-release ]; then
@@ -78,12 +81,12 @@ if ! command -v xdotool &> /dev/null; then
 fi
 
 # Starting the auto-clicker
-echo "Press 'x' to stop the loop!"
+echo "Press 'f6' to stop the loop!"
 
 while true; do
     click
     read -n 1 -t 0.01 key  # Reads a char with a 0.01 second timeout.
-    if [[ $key == "x" || $key == "X" ]]; then
+    if [[ "$key" == "$F6_KEY" ]]; then
         echo -e "\nPoof! Auto-clicker has been stopped!"
         break
     fi
