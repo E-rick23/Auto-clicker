@@ -19,4 +19,4 @@ The Windows script has no dependencies, as it uses system calls to work.
 
 Enjoy your extra clicks! :D
 
-To end the program simply press the "x" key on your keyboard in the terminal.
+To stop the program simply press the "f6" key on your keyboard in the terminal.
