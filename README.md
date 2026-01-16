@@ -6,10 +6,10 @@ The Bash script needs **_xdotool_** to work! But don't worry, the script checks,
 The Windows script has no dependencies, as it uses system calls to work.
 
 ## Usage
-- Windows
-  You only need to compile the code and run the generated .exe file in your favorite terminal.
-- Linux
-  First things first, allowing the script execution with:
+### Windows
+  - You only need to compile the code and run the generated .exe file in your favorite terminal.
+### Linux
+  - First things first, allowing the script execution with:
 
   ``` $ sudo chmod +x auto-clicker.sh ```
 
