@@ -3,6 +3,7 @@ Scripts that emulates mouse clicks for Windows and Linux.
 
 ## Dependencies
 The Bash script needs **_xdotool_** to work! But don't worry, the script checks, and if it doesn't find xdotool, it asks if you want to install it on your system, how covenient!
+
 The Windows script has no dependencies, as it uses system calls to work.
 
 ## Usage
